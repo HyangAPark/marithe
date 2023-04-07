@@ -1,0 +1,2706 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+/* 
+font-family: 'Noto Sans KR', sans-serif;
+font-family: 'Playfair Display', serif;
+*/
+
+/* .row{
+    border: 1px solid #000;
+} */
+
+*{
+    padding: 0;
+    margin: 0;
+    font-family: 'Noto Sans KR', sans-serif;
+    font-size: 14px;
+    box-sizing: border-box;
+}
+li{
+    list-style: none;
+}
+a{
+    text-decoration: none;
+    color: inherit;
+    display: block;
+}
+img{
+    display: block;
+    max-width: 100%;
+}
+.warp{
+    max-width: 65%;
+    margin: 0 auto;
+    position: relative;
+}
+/* header */
+header{
+    width: 100%;
+    height: 100px;
+    position: relative;
+    top: 0;
+    left: 0;
+    z-index: 99;
+    background-color: #fff;
+    border-bottom: 1px solid #e5e5e5;
+}
+header .menu{
+    height: 100px;
+    display: flex;
+    justify-content: space-between;
+}
+header .menu .menu-lf, header .menu .menu-lf2{
+    display: block;
+    width: 2rem;
+    height: 1.5rem;
+    position: relative;
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%);
+    cursor: pointer;
+}
+header .menu .menu-lf .ham ,header .menu .menu-lf2 .ham{
+    width: 2rem;
+    height: 0.1rem;
+    background-color: #000;
+    border-radius: 5px;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+header .menu .menu-lf .ham:nth-child(2), header .menu .menu-lf .ham:nth-child(2),
+header .menu .menu-lf2 .ham:nth-child(2), header .menu .menu-lf2 .ham:nth-child(2){
+    top: 0.7rem;
+}
+header .menu .menu-lf .ham:nth-child(3), header .menu .menu-lf .ham:nth-child(3),
+header .menu .menu-lf2 .ham:nth-child(3), header .menu .menu-lf2 .ham:nth-child(3){
+    top: 1.4rem;
+}
+header .menu .menu-lf2{
+    display: none;
+}
+header .menu .logo{
+    width: auto;
+    height: auto;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    display: flex;
+    align-items: center;
+}
+header .menu .logo a{
+    width: 100%;
+    height: auto;
+    margin: auto;
+}
+header .menu .logo a img{
+    width: 100%;
+    height: auto;
+}
+header .menu .menu-rg{
+    width: 110px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+header .menu .menu-rg a i{
+    display: inline;
+    font-size: 1.5rem;
+}
+
+#ham-menu,#ham-menu2{
+    position: relative;
+    top: 0;
+    left: 0;
+    z-index: 100;
+    display: none;
+}
+#ham-menu .menu,#ham-menu2 .menu{
+    width: 200px;
+    height: 100vh;
+    position: relative;
+    top: 0;
+    left: 0;
+}
+#ham-menu .menu .m-menu,#ham-menu2 .menu .m-menu{
+    position: relative;
+    top: 0;
+    left: 0;
+    z-index: 102;
+    width: 200px;
+    height: 100%;
+    background-color: #fff;
+    padding-top: 20px;
+    border-right: 1px solid #e5e5e5;
+}
+#ham-menu .menu .m-menu .flex,#ham-menu2 .menu .m-menu .flex{
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+#ham-menu .menu .m-menu .flex>.li-gre,#ham-menu2 .menu .m-menu .flex>.li-plus{
+    padding-right: 20px;
+    display: none;
+}
+#ham-menu .menu .m-menu .flex>a,#ham-menu2 .menu .m-menu .flex>a{
+    font-size: 1.2rem;
+    font-weight: 400;
+    line-height: 50px;
+}
+#ham-menu .menu .m-menu li>a,#ham-menu2 .menu .m-menu li>a{
+    font-size: 1.2rem;
+    font-weight: 400;
+    line-height: 50px;
+}
+#ham-menu .menu .m-menu::before{
+    content: '';
+    position: absolute;
+    top: 0px;
+    left: -400px;
+    width: 400px;
+    height: 100vh;
+    background-color: #fff;
+}
+#ham-menu2 .menu::before{
+    content: '';
+    position: absolute;
+    top: 0px;
+    left: -380px;
+    width: 400px;
+    height: 100vh;
+    background-color: #fff;
+}
+#ham-menu2 .menu .m-menu .m-li .s-menu{
+    position: relative;
+    top: 0;
+    left: 0;
+    display: none;
+}
+#ham-menu2 .menu .m-menu li>.s-menu li>a{
+    font-size: 1.2rem;
+    font-weight: 400;
+    line-height: 35px;
+    padding-left: 15px;
+}
+#ham-menu .menu .sub{
+    width: 200px;
+    height: 100%;
+    background-color: #fff;
+    padding-top: 20px;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+#ham-menu .menu .sub>li .s-menu::before{
+    content: '';
+    position: absolute;
+    top: -20px;
+    right: 0px;
+    width: 200px;
+    height: 100vh;
+    background-color: #fff;
+}
+#ham-menu .menu .sub .s-menu{
+    width: 200px;
+    background-color: #fff;
+    display: none;
+}
+#ham-menu .menu .sub>li:nth-child(2) .s-menu2{
+    top:-50px;
+}
+#ham-menu .menu .sub li:nth-child(4) .s-menu4{
+    top:-150px;
+}
+#ham-menu .menu .sub .s-menu>li{
+    line-height: 50px;
+    position: relative;
+}
+#ham-menu .menu .sub .s-menu>li>a{
+    font-size: 1.2rem;
+    font-weight: 400;
+    line-height: 50px;
+    padding-left: 20px;
+}
+#ham-menu .menu .sub .ss-menu{
+    width: 200px;
+    line-height: 35px;
+    position: relative;
+    background-color: #fff;
+    display: none;
+}
+#ham-menu .menu .sub .ss-menu>li>a{
+    font-size: 1.2rem;
+    font-weight: 400;
+    line-height: 35px;
+    padding-left: 30px;
+}
+
+.fix{
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 97;
+}
+.menu-lf.active .ham:nth-child(1),.menu-lf2.active .ham:nth-child(1){
+    transform: translateY(0.7rem) rotate(-45deg);
+}
+.menu-lf.active .ham:nth-child(2),.menu-lf2.active .ham:nth-child(2){
+    opacity: 0;
+}
+.menu-lf.active .ham:nth-child(3),.menu-lf2.active .ham:nth-child(3){
+    transform: translateY(-0.7rem) rotate(45deg);
+}
+/* //header */
+
+/* main */
+.main{
+    width: 100%;
+    height: auto;
+}
+.main .main-bg{
+    position: relative;
+    top: 0;
+    left: 0;
+}
+.main .main-bg .img{
+    width: 100%;
+    height: auto;
+}
+.main .main-bg .img img{
+    width: 100%;
+}
+.main .main-bg .img img:nth-child(2){
+    display: none;
+}
+.main .main-bg .text{
+    width: 100%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    text-align: center;
+}
+.main .main-bg:nth-child(1) .text .first{
+    font-size: 2rem;
+    font-weight: 700;
+    color: #fff;
+}
+.main .main-bg:nth-child(1) .text h2{
+    font-size: 4rem;
+    font-weight: 700;
+    color: #fff;
+    margin-bottom: 1vw;
+    font-family: 'Playfair Display', serif;
+}
+.main .main-bg:nth-child(1) .text h2 span{
+    font-size: 5rem;
+    font-weight: 500;
+    font-family: 'Playfair Display', serif;
+}
+.main .main-bg:nth-child(1) .text .second{
+    font-size: 1.2rem;
+    color: #fff;
+    line-height: 30px;
+}
+.main .main-bg:nth-child(2) .text h2{
+    font-size: 4rem;
+    font-weight: 700;
+    line-height: 5rem;
+    margin-bottom: 1vw;
+    font-family: 'Playfair Display', serif;
+}
+.main .main-bg:nth-child(2) .text h2 span{
+    font-size: 4rem;
+    font-weight: 700;
+    color: #00f;
+    font-family: 'Playfair Display', serif;
+}
+.main .main-bg:nth-child(2) .text .first{
+    font-size: 2rem;
+    font-weight: 700;
+    margin-bottom: 1.2vw;
+}
+.main .main-bg:nth-child(2) .text .second{
+    font-size: 1.2rem;
+    line-height: 30px;
+}
+.main .main-bg:nth-child(3) .text h2{
+    font-size: 4rem;
+    font-weight: 700;
+    line-height: 5rem;
+    font-family: 'Playfair Display', serif;
+    color: #fff;
+    margin-bottom: 1vw;
+}
+.main .main-bg:nth-child(3) .text h2 span{
+    font-size: 5rem;
+    font-weight: 500;
+    font-family: 'Playfair Display', serif;
+}
+.main .main-bg:nth-child(3) .text .first{
+    font-size: 1.2rem;
+    line-height: 30px;
+    color: #fff;
+}
+.main .b-gbtn-prev, .main .bg-btn-next{
+    color: rgba(0, 0, 0, 0.2);
+}
+.main .swiper-button-prev:after, .swiper-button-next:after{
+    color: rgba(0, 0, 0, 0.4);
+}
+.main .swiper-pagination-bullet{
+    background-color: rgba(0, 0, 0, 0.5) !important;
+}
+/* //main */
+
+/* section1 */
+#section1{
+    margin: 200px 0;
+}
+#section1 .sec1-title{
+    width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    align-items: baseline;
+    position: relative;
+    top: 0;
+    left: 0;
+    margin-bottom: 1.5rem;
+}
+#section1 .sec1-title h1{
+    font-size: 2.7rem;
+    font-weight: 700;
+}
+#section1 .sec1-title .plus{
+    width: 2.7rem;
+    height: 2.7rem;
+    margin-left: 1.5rem;
+}
+#section1 .sec1-title .plus a{
+    width: 2.7rem;
+    height: 2.7rem;
+}
+#section1 .sec1-title .plus a i{
+    font-size: 2.7rem;
+}
+#section1 .tab{
+    width: 100%;
+    height: auto;
+    margin-bottom: 2.5rem;
+}
+#section1 .tab ul{
+    display: flex;
+    justify-content: center;
+}
+#section1 .tab ul li a{
+    display: inline;
+    font-size: 1.6rem;
+    text-transform: uppercase;
+    margin-right: 1.5rem;
+    color: #9A9A9A;
+}
+.slidebox{
+    width: 100%;
+    height: auto;
+    position: relative;
+    top: 0;
+    left: 0;
+}
+.sec1-part{
+    width: 100%;
+    height: auto;
+    display: grid;
+    grid-template-rows: repeat(2, 1fr);
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1vw;
+    row-gap: 2.5vw;
+    background-color: #fff;
+}
+.sec1-part .imgbox{
+    width: 100%;
+    height: auto;
+    overflow: hidden;
+}
+.sec1-part .imgbox a{
+    width: 100%;
+    height: auto;
+}
+.sec1-part .imgbox a .img{
+    position: relative;
+    width: 100%;
+    top: 0;
+    left: 0;
+}
+.sec1-part .imgbox a .img img{
+    width: 100%;
+    height: auto;
+}
+.sec1-part .imgbox a .img .rel{
+    position: relative;
+    top: 0;
+    left: 0;
+}
+.sec1-part .imgbox a .img .ab{
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+.sec1-part .imgbox a .text{
+    margin-top: 1vw;
+}
+.sec1-part .imgbox a .text h3{
+    font-size: 1.4rem;
+    font-weight: 500;
+    line-height: 30px;
+    margin-bottom: 10px;
+}
+.sec1-part .imgbox a .text .word{
+    display: flex;
+    align-items: baseline;
+}
+.sec1-part .imgbox a .text .word li{
+    margin-right: 0.5rem;
+    position: relative;
+    top: 0;
+    left: 0;
+    display: flex;
+}
+.sec1-part .imgbox a .text .word li>h5{
+    font-size: 1.4rem;
+}
+.sec1-part .imgbox a .text .word li:last-child>h5{
+    color: #f00;
+}
+.sec1-part .imgbox a .text .word li>s{
+    font-size: 1.2rem;
+    color: #9A9A9A;
+    padding-top: 1px;
+}
+.sec1-part .imgbox a .text h5{
+    font-size: 1.4rem;
+}
+.active{
+    color: #000 !important;
+}
+/* //section1 */
+
+/* section2 */
+#section2{
+    width: 100%;
+    height: 100%;
+    background-image: url(../img/section2_bg.jpg);
+    background-size: 100%;
+    background-repeat: no-repeat;
+    margin: 200px 0;
+}
+#section2 .overlay{
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 5% 0;
+}
+#section2 .overlay .inner{
+    width: 100%;
+    display: grid;
+    grid-template-rows: repeat(1,1fr);
+    grid-template-columns: repeat(3,1fr);
+}
+#section2 .overlay .inner .video{
+    width: 90%;
+    height: auto;
+    grid-column: 1/3;
+}
+#section2 .overlay .inner .video video{
+    width: 100%;
+    height: auto;
+}
+#section2 .overlay .inner .text{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    grid-column: 3/4;
+}
+#section2 .overlay .inner .text h3{
+    font-size: 2.7rem;
+    font-weight: 700;
+    color: #fff;
+    font-family: 'Playfair Display', serif;
+    margin-bottom: 1.5rem;
+}
+#section2 .overlay .inner .text h4{
+    font-size: 1.7rem;
+    font-weight: 400;
+    color: #fff;
+    margin-bottom: 1rem;
+}
+#section2 .overlay .inner .text p{
+    font-size: 1.2rem;
+    color: #fff;
+    line-height: 30px;
+    margin-bottom: 2rem;
+}
+#section2 .overlay .inner .text .btn{
+    width: 130px;
+    height: 40px;
+    position: relative;
+    top: 0;
+    left: 0;
+}
+#section2 .overlay .inner .text .btn a{
+    width: 130px;
+    height: 40px;
+    background-color: transparent;
+    border: 1px solid #fff;
+    cursor: pointer;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+#section2 .overlay .inner .text .btn a img{
+    width: 60%;
+    height: auto;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
+#section2 .overlay .inner .text .btn2{
+    display: none;
+}
+#section2 .overlay .inner .text .btn .btn2.active{
+    background-color: #fff;
+    color: #000;
+}
+/* //section2 */
+
+/* banner */
+.banner{
+    width: 100%;
+    height: 100%;
+    position: relative;
+    margin-bottom: 200px;
+}
+.banner .imgbox{
+    width: 100%;
+    height: 100%;
+    position: relative;
+    top: 0;
+    left: 0;
+}
+.banner .imgbox .text{
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    left: 18vw;
+}
+.banner .b-inner1 .imgbox .text h2{
+    font-size: 2.7rem;
+    font-weight: 700;
+    margin-bottom: 1.2rem;
+}
+.banner .b-inner1 .imgbox .text p{
+    font-size: 1.2rem;    
+    line-height: 32px;
+}
+.banner .b-inner1 .imgbox .text p span{
+    font-size: 1.5rem;
+}
+.banner .b-inner2 .imgbox .text h2{
+    font-size: 2.7rem;
+    font-weight: 700;
+    margin-bottom: 1.2rem;
+    color: #fff;
+}
+.banner .b-inner2 .imgbox .text p{
+    font-size: 1.2rem;    
+    line-height: 30px;
+    color: #fff;
+}
+.banner .b-inner3 .imgbox .text h2{
+    font-size: 2.7rem;
+    font-weight: 700;
+    margin-bottom: 1.2rem;
+}
+.banner .b-inner3 .imgbox .text p{
+    font-size: 1.2rem;    
+    line-height: 30px;
+}
+/* //banner */
+
+/* section3 */
+#section3{
+    width: 100%;
+    height: 100%;
+}
+#section3 .box{
+    width: 100%;
+    height: 100%;
+    display: grid;
+    grid-template-rows: repeat(1,1fr);
+    grid-template-columns: repeat(3,1fr);
+    gap: 1vw;
+}
+#section3 .box .b-inner .img{
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    position: relative;
+    top: 0;
+    left: 0;
+}
+#section3 .box .b-inner .img img{
+    width: 100%;
+    height: auto;
+    transform: scale(1);
+    transition: all 0.2s ease-in-out;
+}
+#section3 .box .b-inner a:hover .img::after{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.07);
+}
+#section3 .box .b-inner a:hover .img img{
+    transform: scale(1.025);
+    transition: all 0.2s ease-in-out;
+}
+#section3 .box .b-inner .text{
+    text-align: center;
+    margin-top: 30px;
+}
+#section3 .box .b-inner .text h3{
+    font-size: 1.7rem;
+    font-weight: 600;
+    margin-bottom: 0.7rem;
+}
+#section3 .box .b-inner .text p{
+    font-size: 1.2rem;
+    line-height: 30px;
+}
+/* //section3 */
+
+/* section4 */
+#section4{
+    width: 100%;
+    height: 100%;
+    margin: 200px 0;
+}
+#section4 .box{
+    width: 100%;
+    height: 100%;
+    display: grid;
+    grid-template-rows: repeat(1, 1fr);
+    grid-template-columns: repeat(2,1fr);
+    gap: 1vw;
+}
+#section4 .box .img{
+    width: 100%;
+    height: auto;
+}
+#section4 .box .img img{
+    width: 100%;
+    height: 100%;
+}
+#section4 .box .b-inner{
+    position: relative;
+    top: 0;
+    left: 0;
+}
+#section4 .box .b-inner .text{
+    position: absolute;
+    top: 25px;
+    left: 25px;
+}
+#section4 .box .b-inner .text h3{
+    font-size: 1.7rem;
+    font-weight: 600;
+    margin-bottom: 0.7rem;
+    color: #fff;
+}
+#section4 .box .b-inner .text p{
+    font-size: 1.2rem;
+    line-height: 30px;
+    color: #fff;
+    margin-bottom: 1.2rem;
+}
+#section4 .box .b-inner .text .btn{
+    width: 120px;
+    height: 40px;
+    position: relative;
+    top: 0;
+    left: 0;
+}
+#section4 .box .b-inner .text .btn1-2{
+    display: none;
+}
+#section4 .box .b-inner .text .btn2-2{
+    display: none;
+}
+#section4 .box .b-inner .text .btn a{
+    width: 120px;
+    height: 40px;
+    background-color: transparent;
+    border: 1px solid #fff;
+    cursor: pointer;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+#section4 .box .b-inner .text .btn a img{
+    width: 60%;
+    height: auto;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
+#section4 .box .b-inner .img{
+    width: 100%;
+    height: 100%;
+    position: relative;
+    top: 0;
+    left: 0;
+    overflow: hidden;
+}
+#section4 .box .b-inner .img img{
+    transform: scale(1);
+    transition: all 0.2s ease-in-out;
+}
+#section4 .box .b-inner .img::after{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.25);
+}
+/* //section4 */
+
+/* section5 */
+#section5{
+    width: 100%;
+    height: 100%;
+    margin-bottom: 200px;
+}
+#section5 .sec5-title{
+    text-align: center;
+    margin-bottom: 40px;
+}
+#section5 .sec5-title h2{
+    font-size: 2.7rem;
+    font-weight: 700;
+}
+#section5 .imgbox .img{
+    width: 100%;
+    height: 100%;
+    position: relative;
+    top: 0;
+    left: 0;
+}
+#section5 .imgbox .img img{
+    width: 100%;
+    height: auto;
+}
+#section5 .imgbox .img .review{
+    width: 100%;
+    height: 35%;
+    padding: 5%;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    display: none;
+}
+#section5 .imgbox .img .review .name{
+    display: flex;
+    justify-content: center;
+    margin-bottom: 5px;
+}
+#section5 .imgbox .img .review .name li:first-child{
+    margin-right: 5px;
+}
+#section5 .imgbox .img .review .name li:first-child i{
+    font-size: 1.2rem;
+    padding-top: 5px;
+}
+#section5 .imgbox .img .review .name li:last-child{
+    display: flex;
+    align-items: center;
+}
+#section5 .imgbox .img .review .name li:last-child a{
+    font-size: 1.2rem;
+    font-weight: 500;
+}
+#section5 .imgbox .img .review p{
+    font-size: 1.2rem;
+    text-align: center;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: normal;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+}
+/* section5 */
+/* footer */
+/* foot1 */
+footer{
+    width: 100%;
+    height: 100%;
+}
+footer .foot1{
+    width: 100%;
+    height: 100%;
+    background-color: #f1f1f1;
+}
+footer .foot1 .f1-con{
+    width: 100%;
+    height: 100%;
+    display: grid;
+    grid-template-rows: repeat(1,1fr);
+    grid-template-columns: repeat(5,1fr);
+    justify-items: center;
+}
+footer .foot1 .f1-con .f1-item{
+    padding: 3vw 0;
+}
+footer .foot1 .f1-con .f1-item .inner p{
+    font-size: 1.7rem;
+    font-weight: 600;
+    margin-bottom: 12px;
+}
+footer .foot1 .f1-con .f1-item:last-child .inner p{
+    margin-bottom: 17px;
+}
+footer .foot1 .f1-con .f1-item .inner ul li{
+    display: flex;
+    align-items: center;
+}
+footer .foot1 .f1-con .f1-item .inner ul li a{
+    font-size: 1.2rem;
+    line-height: 35px;
+}
+footer .foot1 .f1-con .f1-item:last-child .inner ul{
+    width: 120px;
+    display: flex;
+    justify-content: space-between;
+}
+footer .foot1 .f1-con .f1-item:last-child .inner ul li:nth-child(1){
+    display: flex;
+}
+footer .foot1 .f1-con .f1-item:last-child .inner ul li:nth-child(1) button{
+    width: 2rem;
+    height: 2rem;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    margin-bottom: 2px;
+}
+footer .foot1 .f1-con .f1-item:last-child .inner ul li:nth-child(2) button{
+    width: 2rem;
+    height: 2.35rem;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+}
+footer .foot1 .f1-con .f1-item:last-child .inner ul li:nth-child(3) button{
+    width: 3rem;
+    height: 2.35rem;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+}
+footer .foot1 .f1-con .f1-item:last-child .inner ul li:nth-child(2) button i
+,footer .foot1 .f1-con .f1-item:last-child .inner ul li:nth-child(3) button i{
+    font-size: 2.35rem;
+}
+/* //foot1 */
+/* foot2 */
+footer .foot2{
+    width: 100%;
+    height: 100%;
+    background-color: #000;
+    padding: 5vw 0;
+}
+footer .foot2 .f2-con{
+    width: 100%;
+    height: 100%;
+    display: grid;
+    grid-template-rows: repeat(1,1fr);
+    grid-template-columns: repeat(8,1fr);
+}
+footer .foot2 .f2-con .f2-item:nth-child(1){
+    grid-column: 1/3;
+    display: flex;
+    align-items: center;
+}
+footer .foot2 .f2-con .f2-item:nth-child(1) .logo{
+    width: 10vw;
+    height: auto;
+}
+footer .foot2 .f2-con .f2-item:nth-child(1) .logo img{
+    width: 100%;
+    height: auto;
+}
+footer .foot2 .f2-con .f2-item:nth-child(2){
+    grid-column: 3/7;
+}
+footer .foot2 .f2-con .f2-item:nth-child(2) .inner p{
+    font-size: 1.7rem;
+    font-weight: 600;
+    color: #fff;
+    margin-bottom: 10px;
+}
+footer .foot2 .f2-con .f2-item:nth-child(2) .inner ul li{
+    font-size: 1.2rem;
+    color: #fff;
+    line-height: 35px;
+}
+footer .foot2 .f2-con .f2-item:nth-child(2) .inner ul li:nth-child(2){
+    display: flex;
+}
+footer .foot2 .f2-con .f2-item:nth-child(2) .inner ul li:nth-child(2) a{
+    font-size: 1.2rem;
+    font-weight: 700;
+}
+footer .foot2 .f2-con .f2-item:nth-child(2) .inner ul li:nth-child(5){
+    margin-top: 10px;
+}
+footer .foot2 .f2-con .f2-item:nth-child(3){
+    grid-column: 7/9;
+}
+footer .foot2 .f2-con .f2-item:nth-child(3) .inner p{
+    font-size: 1.7rem;
+    font-weight: 600;
+    color: #fff;
+    margin-bottom: 10px;
+}
+footer .foot2 .f2-con .f2-item:nth-child(3) .inner ul li{
+    font-size: 1.2rem;
+    color: #fff;
+    line-height: 35px;
+}
+footer .foot2 .f2-con .f2-item:nth-child(3) .inner ul li:first-child{
+    font-size: 2rem;
+    font-weight: 600;
+    margin-bottom: 7px;
+}
+footer .foot2 .f2-con .f2-item:last-child .inner2{
+    display: none;
+}
+/* //foot2 */
+/* //footer */
+
+/* scroll */
+#scroll{
+    width: auto;
+    height: auto;
+    position: fixed;
+    right: 5vw;
+    bottom: 5vw;
+    z-index: 999;
+    /* display: none; */
+}
+#scroll>button{
+    /* border: none; */
+    background-color: transparent;
+    cursor: pointer;
+    border: none;
+    width: 4vw;
+    height: auto;
+}
+/* scroll */
+
+/* 1700이하 */
+@media screen and (max-width:1700px){
+    .warp{
+        max-width: 70%;
+    }
+    /* section2 */
+    #section2{
+        background-size: 110%;
+    }
+    #section2 .overlay {
+        padding: 4% 0;
+    }
+    /* banner */
+    .banner .imgbox{
+        width: 110%;
+    }
+    .banner .imgbox .text{
+        left: 15vw;
+    }
+}
+
+/* 1500이하 */
+@media screen and (max-width:1500px){
+    .warp{
+        max-width: 80%;
+    }
+    .banner .imgbox .text{
+        left: 11vw;
+    }
+}
+
+/* 1350이하 */
+@media screen and (max-width:1350px){
+    /* main */
+    .main .main-bg:nth-child(1) .text .first{
+        font-size: 1.7rem;
+    }
+    .main .main-bg:nth-child(1) .text h2{
+        font-size: 3.7rem;
+    }
+    .main .main-bg:nth-child(1) .text h2 span{
+        font-size: 4.5rem;
+    }
+    .main .main-bg:nth-child(1) .text .second{
+        font-size: 1.1rem;
+        line-height: 27px;
+    }
+    .main .main-bg:nth-child(2) .text h2{
+        font-size: 3.7rem;
+        line-height: 4.5rem;
+    }
+    .main .main-bg:nth-child(2) .text h2 span{
+        font-size: 3.7rem;
+    }
+    .main .main-bg:nth-child(2) .text .first{
+        font-size: 1.7rem;
+    }
+    .main .main-bg:nth-child(2) .text .second{
+        font-size: 1.1rem;
+        line-height: 27px;
+    }
+    .main .main-bg:nth-child(3) .text h2{
+        font-size: 3.7rem;
+        line-height: 4.5rem;
+    }
+    .main .main-bg:nth-child(3) .text h2 span{
+        font-size: 4.5rem;
+    }
+    .main .main-bg:nth-child(3) .text .first{
+        font-size: 1.1rem;
+        line-height: 27px;
+    }
+    /* section1 */
+    #section1 .sec1-title h1{
+        font-size: 2.4rem;
+    }
+    #section1 .sec1-title .plus{
+        width: 2.4rem;
+        height: 2.4rem;
+    }
+    #section1 .sec1-title .plus a{
+        width: 2.4rem;
+        height: 2.4rem;
+    }
+    #section1 .sec1-title .plus a i{
+        font-size: 2.4rem;
+    }
+    #section1 .tab ul li a{
+        font-size: 1.3rem;
+    }
+    #section1 .tab{
+        margin-bottom: 2.3rem;
+    }
+    .sec1-part .imgbox a .text h3{
+        font-size: 1.3rem;
+        line-height: 27px;
+    }
+    .sec1-part .imgbox a .text .word li>h5{
+        font-size: 1.3rem;
+    }
+    .sec1-part .imgbox a .text .word li>s {
+        font-size: 1.1rem;
+    }
+    .sec1-part .imgbox a .text h5{
+        font-size: 1.3rem;
+    }
+    /* section2 */
+    #section2 .overlay .inner .text h3{
+        font-size: 2.4rem;
+        margin-bottom: 1.2rem;
+    }
+    #section2 .overlay .inner .text h4{
+        font-size: 1.4rem;
+        margin-bottom: 0.7rem;
+    }
+    #section2 .overlay .inner .text p{
+        font-size: 1.1rem;
+        line-height: 25px;
+        margin-bottom: 1.7rem;
+    }
+    #section2 .overlay .inner .text .btn{
+        width: 120px;
+        height: 40px;
+    }
+    #section2 .overlay .inner .text .btn a{
+        width: 115px;
+        height: 40px;
+    }
+    /* banner */
+    .banner .b-inner1 .imgbox .text h2{
+        font-size: 2.4rem;
+    }
+    .banner .b-inner1 .imgbox .text p{
+        font-size: 1.1rem;
+        line-height: 27px;
+    }
+    .banner .b-inner1 .imgbox .text p span{
+        font-size: 1.3rem;
+    }
+    .banner .b-inner2 .imgbox .text h2{
+        font-size: 2.4rem;
+    }
+    .banner .b-inner2 .imgbox .text p{
+        font-size: 1.1rem;
+        line-height: 25px;
+    }
+    .banner .b-inner3 .imgbox .text h2{
+        font-size: 2.4rem;
+    }
+    .banner .b-inner3 .imgbox .text p{
+        font-size: 1.1rem;
+        line-height: 25px;
+    }
+    /* section3 */
+    #section3 .box .b-inner .text h3{
+        font-size: 1.4rem;
+    }
+    #section3 .box .b-inner .text p{
+        font-size: 1.1rem;
+        line-height: 25px;
+    }
+    /* section4 */
+    #section4 .box .b-inner .text h3{
+        font-size: 1.4rem;
+    }
+    #section4 .box .b-inner .text p{
+        font-size: 1.1rem;
+        line-height: 25px;
+    }
+    #section4 .box .b-inner .text .btn{
+        width: 110px;
+        height: 37px;
+    }
+    #section4 .box .b-inner .text .btn a{
+        width: 110px;
+        height: 37px;
+    }
+    /* section5 */
+    #section5 .sec5-title h2{
+        font-size: 2.4rem;
+    }
+    #section5 .imgbox .img .review .name li:first-child i{
+        font-size: 1rem;
+    }
+    #section5 .imgbox .img .review .name li:last-child a{
+        font-size: 1rem;
+    }
+    #section5 .imgbox .img .review p{
+        font-size: 1rem;
+    }
+    /* footer */
+    footer .foot1 .f1-con .f1-item .inner p{
+        font-size: 1.4rem;
+    }
+    footer .foot1 .f1-con .f1-item .inner ul li a{
+        font-size: 1.1rem;
+        line-height: 30px;
+    }
+    footer .foot1 .f1-con .f1-item:last-child .inner ul{
+        width: 110px
+    }
+    footer .foot2 .f2-con .f2-item:nth-child(2) .inner p{
+        font-size: 1.4rem;
+    }
+    footer .foot2 .f2-con .f2-item:nth-child(2) .inner ul li {
+        font-size: 1.1rem;
+        line-height: 30px;
+    }
+    footer .foot2 .f2-con .f2-item:nth-child(2) .inner ul li:nth-child(2) a {
+        font-size: 1.1rem;
+    }
+    footer .foot2 .f2-con .f2-item:nth-child(3) .inner p {
+        font-size: 1.4rem;
+    }
+    footer .foot2 .f2-con .f2-item:nth-child(3) .inner ul li:first-child {
+        font-size: 1.7rem;
+    }
+    footer .foot2 .f2-con .f2-item:nth-child(3) .inner ul li {
+        font-size: 1.1rem;
+        line-height: 30px;
+    }
+}
+
+/* 1200이하 */
+@media screen and (max-width:1200px){
+    /* header */
+    header{
+        height: 70px;
+    }
+    header .menu{
+        height: 70px;
+    }
+    header .menu .menu-lf{
+        width: 1.5rem;
+        height: 1.2rem;
+    }
+    header .menu .menu-lf .ham{
+        width: 1.5rem;
+    }
+    header .menu .menu-lf .ham:nth-child(2){
+        top: 0.5rem;
+    }
+    header .menu .menu-lf .ham:nth-child(3){
+        top: 1rem;
+    }
+    #ham-menu .menu{
+        width: 160px;
+    }
+    #ham-menu .menu .m-menu{
+        width: 160px;
+    }
+    #ham-menu .menu .m-menu .flex>a{
+        font-size: 1rem;
+        line-height: 40px;
+    }
+    #ham-menu .menu .m-menu li>a{
+        font-size: 1rem;
+        line-height: 40px;
+    }
+    #ham-menu .menu .sub{
+        width: 160px;
+        margin-left: -40px;
+    }
+    #ham-menu .menu .sub>li .s-menu::before{
+        width: 160px;
+    }
+    #ham-menu .menu .sub .s-menu{
+        width: 160px;
+    }
+    #ham-menu .menu .sub>li:nth-child(2) .s-menu2{
+        top:-40px;
+    }
+    #ham-menu .menu .sub li:nth-child(4) .s-menu4{
+        top:-120px;
+    }
+    #ham-menu .menu .sub .s-menu>li{
+        line-height: 40px;
+    }
+    #ham-menu .menu .sub .s-menu>li>a{
+        font-size: 1rem;
+        line-height: 40px;
+    }
+    #ham-menu .menu .sub .ss-menu{
+        width: 160px;
+        line-height: 25px;
+    }
+    #ham-menu .menu .sub .ss-menu>li>a{
+        font-size: 1rem;
+        line-height: 25px;
+        padding-left: 27px;
+    }
+    header .menu .logo a{
+        width: 70%;
+    }
+    header .menu .menu-rg a i{
+        font-size: 1.3rem;
+    }
+    header .menu .menu-rg{
+        width: 100px;
+    }
+    
+    .menu-lf.active .ham:nth-child(1){
+        transform: translateY(0.5rem) rotate(-45deg);
+    }
+    .menu-lf.active .ham:nth-child(2){
+        opacity: 0;
+    }
+    .menu-lf.active .ham:nth-child(3){
+        transform: translateY(-0.5rem) rotate(45deg);
+    }
+    /* main */
+    .main .main-bg:nth-child(1) .text .first{
+        font-size: 1.5rem;
+        font-weight: 600;
+    }
+    .main .main-bg:nth-child(1) .text h2{
+        font-size: 3rem;
+    }
+    .main .main-bg:nth-child(1) .text h2 span{
+        font-size: 3.7rem;
+    }
+    .main .main-bg:nth-child(1) .text .second{
+        font-size: 1rem;
+        line-height: 20px;
+    }
+    .main .main-bg:nth-child(2) .text h2{
+        font-size: 3rem;
+        line-height: 3.5rem;
+    }
+    .main .main-bg:nth-child(2) .text h2 span{
+        font-size: 3rem;
+    }
+    .main .main-bg:nth-child(2) .text .first{
+        font-size: 1.5rem;
+        font-weight: 600;
+    }
+    .main .main-bg:nth-child(2) .text .second{
+        font-size: 1rem;
+        line-height: 20px;
+    }
+    .main .main-bg:nth-child(3) .text h2{
+        font-size: 3rem;
+        line-height: 3.5rem;
+    }
+    .main .main-bg:nth-child(3) .text h2 span{
+        font-size: 3.7rem;
+    }
+    .main .main-bg:nth-child(3) .text .first{
+        font-size: 1rem;
+        line-height: 20px;
+    }
+    .main .b-gbtn-prev, .main .bg-btn-next{
+        font-size: 32px;
+    }
+    .main .swiper-button-prev:after, .swiper-button-next:after{        font-size: 32px;
+        font-size: 32px;
+    }
+    /* section1 */
+    #section1{
+        margin: 150px 0;
+    }
+    #section1 .sec1-title{
+        margin-bottom: 1rem;
+    }
+    #section1 .sec1-title h1{
+        font-size: 2rem;
+    }
+    #section1 .sec1-title .plus{
+        width: 2.3rem;
+        height: 2.3rem;
+    }
+    #section1 .sec1-title .plus a{
+        width: 2rem;
+        height: 2rem;
+    }
+    #section1 .sec1-title .plus a i{
+        font-size: 2rem;
+    }
+    #section1 .tab ul li a{
+        font-size: 1.3rem;
+    }
+    #section1 .tab{
+        margin-bottom: 1.7rem;
+    }
+    .sec1-part .imgbox a .text h3{
+        font-size: 1.2rem;
+        line-height: 23px;
+    }
+    .sec1-part .imgbox a .text .word li>h5{
+        font-size: 1.2rem;
+    }
+    .sec1-part .imgbox a .text .word li>s {
+        font-size: 1rem;
+    }
+    .sec1-part .imgbox a .text h5{
+        font-size: 1.2rem;
+    }
+    .sec1-part .imgbox a .text h3{
+        margin-bottom: 7px;
+    }
+    /* section2 */
+    #section2{
+        margin: 150px 0;
+        background-size: 115%;
+    }
+    #section2 .overlay .inner .text h3{
+        margin-bottom: 1.2rem;
+    }
+    #section2 .overlay .inner .text h4{
+        margin-bottom: 0.7rem;
+    }
+    #section2 .overlay .inner .text p{
+        margin-bottom: 1.5rem;
+    }
+    #section2 .overlay .inner .text h3{
+        font-size: 2.3rem;
+        margin-bottom: 0.9rem;
+    }
+    #section2 .overlay .inner .text h4{
+        font-size: 1.4rem;
+        margin-bottom: 0.7rem;
+    }
+    #section2 .overlay .inner .text p{
+        font-size: 1rem;
+        line-height: 23px;
+        margin-bottom: 1.3rem;
+    }
+    #section2 .overlay .inner .text .btn{
+        width: 110px;
+        height: 35px;
+    }
+    #section2 .overlay .inner .text .btn a{
+        width: 105px;
+        height: 35px;
+    }
+    /* banner */
+    .banner{
+        margin-bottom: 150px;
+    }
+    .banner .b-inner1 .imgbox .text h2{
+        font-size: 2.3rem;
+    }
+    .banner .b-inner1 .imgbox .text p{
+        font-size: 1rem;
+        line-height: 23px;
+    }
+    .banner .b-inner1 .imgbox .text p span{
+        font-size: 1.2rem;
+    }
+    .banner .b-inner2 .imgbox .text h2{
+        font-size: 2.3rem;
+    }
+    .banner .b-inner2 .imgbox .text p{
+        font-size: 1rem;
+        line-height: 23px;
+    }
+    .banner .b-inner3 .imgbox .text h2{
+        font-size: 2.3rem;
+    }
+    .banner .b-inner3 .imgbox .text p{
+        font-size: 1rem;
+        line-height: 23px;
+    }
+    /* section3 */
+    #section3 .box .b-inner .text{
+        margin-top: 25px;
+    }
+    #section3 .box .b-inner .text h3{
+        font-size: 1.4rem;
+    }
+    #section3 .box .b-inner .text p{
+        font-size: 1rem;
+        line-height: 23px;
+    }
+    /* section4 */
+    #section4{
+        margin: 150px 0;
+    }
+    #section4 .box .b-inner .text p{
+        font-size: 1rem;
+        line-height: 23px;
+    }
+    #section4 .box .b-inner .text .btn{
+        width: 95px;
+        height: 30px;
+    }
+    #section4 .box .b-inner .text .btn a{
+        width: 95px;
+        height: 30px;
+    }
+    /* section5 */
+    #section5{
+        margin-bottom: 150px;
+    }
+    #section5 .sec5-title h2{
+        font-size: 2.3rem;
+    }
+    /* footer */
+    footer .foot1 .f1-con .f1-item .inner p{
+        font-size: 1.4rem;
+    }
+    footer .foot1 .f1-con .f1-item:last-child .inner ul{
+        width: 95px;
+    }
+    footer .foot1 .f1-con .f1-item .inner ul li a{
+        font-size: 1rem;
+        line-height: 27px;
+    }
+    footer .foot1 .f1-con .f1-item:last-child .inner ul li:nth-child(1) button{
+        width: 1.8rem;
+        height: 1.8rem;
+        margin-bottom: 2px;
+    }
+    footer .foot1 .f1-con .f1-item:last-child .inner ul li:nth-child(2) button{
+        width: 2rem;
+        height: 2rem;
+    }
+    footer .foot1 .f1-con .f1-item:last-child .inner ul li:nth-child(3) button {
+        width: 2rem;
+        height: 2rem;
+    }
+    footer .foot1 .f1-con .f1-item:last-child .inner ul li:nth-child(2) button i
+    ,footer .foot1 .f1-con .f1-item:last-child .inner ul li:nth-child(3) button i{
+        font-size: 2.1rem;
+    }
+    footer .foot2 .f2-con{
+        grid-template-columns: repeat(10,1fr);
+    }
+    footer .foot2 .f2-con .f2-item:nth-child(1){
+        grid-column: 1/3;
+    }
+    footer .foot2 .f2-con .f2-item:nth-child(2){
+        grid-column: 3/8;
+    }
+    footer .foot2 .f2-con .f2-item:nth-child(3){
+        grid-column: 8/10;
+    }
+    footer .foot2 .f2-con .f2-item:nth-child(2) .inner ul li {
+        font-size: 1rem;
+        line-height: 27px;
+    }
+    footer .foot2 .f2-con .f2-item:nth-child(2) .inner ul li:nth-child(2) a {
+        font-size: 1rem;
+    }
+    footer .foot2 .f2-con .f2-item:nth-child(3) .inner ul li:first-child {
+        font-size: 1.6rem;
+    }
+    footer .foot2 .f2-con .f2-item:nth-child(3) .inner ul li {
+        font-size: 1rem;
+        line-height: 27px;
+    }
+    /* scroll */
+    #scroll{
+        right: 6vw;
+        bottom: 6vw;
+    }
+    #scroll>button{
+        width: 5vw;
+    }
+}
+
+/* 1023이하 */
+@media screen and (max-width:1023px){
+    .warp{
+        max-width: 90%;
+    }
+    /* header */
+    header .menu .menu-rg a i{
+        font-size: 1rem;
+    }
+    header .menu .menu-rg{
+        width: 80px;
+    }
+    #ham-menu .menu .m-menu .flex>a{
+        font-size: 0.8rem;
+    }
+    #ham-menu .menu .m-menu li>a{
+        font-size: 0.8rem;
+    }
+    #ham-menu .menu .sub .s-menu>li>a{
+        font-size: 0.8rem;
+    }
+    #ham-menu .menu .sub .ss-menu>li>a{
+        font-size: 0.8rem;
+    }
+    /* main */
+    .main .main-bg:nth-child(1) .text .first{
+        font-size: 1.1rem;
+        font-weight: 500;
+    }
+    .main .main-bg:nth-child(1) .text h2{
+        font-size: 2.2rem;
+    }
+    .main .main-bg:nth-child(1) .text h2 span{
+        font-size: 3rem;
+    }
+    .main .main-bg:nth-child(1) .text .second{
+        font-size: 0.8rem;
+        line-height: 18px;
+    }
+    .main .main-bg:nth-child(2) .text h2{
+        font-size: 2.2rem;
+        line-height: 2.7rem;
+    }
+    .main .main-bg:nth-child(2) .text h2 span{
+        font-size: 2.2rem;
+    }
+    .main .main-bg:nth-child(2) .text .first{
+        font-size: 1.1rem;
+        font-weight: 500;
+    }
+    .main .main-bg:nth-child(2) .text .second{
+        font-size: 0.8rem;
+        line-height: 18px;
+    }
+    .main .main-bg:nth-child(3) .text h2{
+        font-size: 2.2rem;
+        line-height: 2.7rem;
+    }
+    .main .main-bg:nth-child(3) .text h2 span{
+        font-size: 3.2rem;
+    }
+    .main .main-bg:nth-child(3) .text .first{
+        font-size: 0.8rem;
+        line-height: 18px;
+    }
+    /* section1 */
+    #section1{
+        margin: 100px 0;
+    }
+    #section1 .sec1-title h1{
+        font-size: 1.7rem;
+        margin-bottom: 1.8px;
+    }
+    #section1 .sec1-title .plus{
+        width: 1.5rem;
+        height: 1.5rem;
+        margin-left: 1rem;
+    }
+    #section1 .sec1-title .plus a{
+        width: 1.5rem;
+        height: 1.5rem;
+    }
+    #section1 .sec1-title .plus a i{
+        font-size: 1.5rem;
+    }
+    #section1 .tab ul li a{
+        font-size: 1.1rem;
+    }
+    #section1 .tab{
+        margin-bottom: 1.8rem;
+    }
+    .sec1-part .imgbox a .text h3{
+        font-size: 0.9rem;
+        line-height: 20px;
+        margin-bottom: 5px;
+    }
+    .sec1-part .imgbox a .text .word li>h5{
+        font-size: 0.9rem;
+    }
+    .sec1-part .imgbox a .text .word li>s {
+        font-size: 0.8rem;
+    }
+    .sec1-part .imgbox a .text h5{
+        font-size: 0.9rem;
+    }
+    /* section2 */
+    #section2{
+        margin: 100px 0;
+        background-size: 120%;
+    }
+    #section2 .overlay .inner .text h3{
+        margin-bottom: 1rem;
+    }
+    #section2 .overlay .inner .text h4{
+        margin-bottom: 0.5rem;
+    }
+    #section2 .overlay .inner .text p{
+        margin-bottom: 1.3rem;
+    }
+    #section2 .overlay .inner .text h3{
+        font-size: 1.7rem;
+    }
+    #section2 .overlay .inner .text h4{
+        font-size: 0.9rem;
+    }
+    #section2 .overlay .inner .text .btn{
+        width: 95px;
+        height: 30px;
+    }
+    #section2 .overlay .inner .text .btn a{
+        width: 95px;
+        height: 30px;
+    }
+    /* banner */
+    .banner{
+        margin-bottom: 100px;
+    }
+    .banner .b-inner1 .imgbox .text h2{
+        font-size: 1.4rem;
+        margin-bottom: 0.8rem;
+    }
+    .banner .b-inner1 .imgbox .text p{
+        font-size: 0.8rem;
+        line-height: 21px;
+    }
+    .banner .b-inner1 .imgbox .text p span{
+        font-size: 0.9rem;
+    }
+    .banner .b-inner2 .imgbox .text h2{
+        font-size: 1.4rem;
+        margin-bottom: 0.8rem;
+    }
+    .banner .b-inner2 .imgbox .text p{
+        font-size: 0.8rem;
+        line-height: 18px;
+    }
+    .banner .b-inner3 .imgbox .text h2{
+        font-size: 1.4rem;
+        margin-bottom: 0.8rem;
+    }
+    .banner .b-inner3 .imgbox .text p{
+        font-size: 0.8rem;
+        line-height: 18px;
+    }
+    /* section3 */
+    #section3 .box .b-inner .text{
+        margin-top: 20px;
+    }
+    #section3 .box .b-inner .text h3{
+        font-size: 1rem;
+        margin-bottom: 7px;
+    }
+    #section3 .box .b-inner .text p{
+        font-size: 0.8rem;
+        line-height: 18px;
+    }
+    /* section4 */
+    #section4{
+        margin: 100px 0;
+    }
+    #section4 .box .b-inner .text h3{
+        font-size: 1rem;
+        margin-bottom: 0.5rem;
+    }
+    #section4 .box .b-inner .text p{
+        font-size: 0.8rem;
+        line-height: 18px;
+        margin-bottom: 0.8rem;
+    }
+    #section4 .box .b-inner .text .btn{
+        width: 87px;
+        height: 27px;
+    }
+    #section4 .box .b-inner .text .btn a{
+        width: 87px;
+        height: 27px;
+    }
+    /* section5 */
+    #section5{
+        margin-bottom: 100px;
+    }
+    #section5 .sec5-title {
+        margin-bottom: 32px;
+    }
+    #section5 .sec5-title h2{
+        font-size: 1.7rem;
+    }
+    #section5 .imgbox .img .review .name {
+        margin-bottom: 0px;
+    }
+    #section5 .imgbox .img .review .name li:first-child i{
+        font-size: 0.8rem;
+    }
+    #section5 .imgbox .img .review .name li:last-child a{
+        font-size: 0.8rem;
+    }
+    #section5 .imgbox .img .review p{
+        font-size: 0.8rem;
+    }
+    /* footer */
+    footer .foot1 .f1-con .f1-item .inner p{
+        font-size: 1rem;
+        margin-bottom: 9px;
+    }
+    footer .foot1 .f1-con .f1-item:last-child .inner p{
+        margin-bottom: 13px;
+    }
+    footer .foot1 .f1-con .f1-item .inner ul li a{
+        font-size: 0.8rem;
+        line-height: 23px;
+    }
+    footer .foot2 .f2-con .f2-item:nth-child(2) .inner p{
+        font-size: 1rem;
+    }
+    footer .foot2 .f2-con .f2-item:nth-child(2) .inner ul li {
+        font-size: 0.8rem;
+        line-height: 23px;
+    }
+    footer .foot2 .f2-con .f2-item:nth-child(2) .inner ul li:nth-child(2) a {
+        font-size: 0.8rem;
+    }
+    footer .foot2 .f2-con .f2-item:nth-child(3) .inner p {
+        font-size: 1rem;
+    }
+    footer .foot2 .f2-con .f2-item:nth-child(3) .inner ul li:first-child {
+        font-size: 1.2rem;
+    }
+    footer .foot2 .f2-con .f2-item:nth-child(3) .inner ul li {
+        font-size: 0.8rem;
+        line-height: 23px;
+    }
+    /* scroll */
+    #scroll>button{
+        width: 9vw;
+    }
+}
+
+/* 768이하 */
+@media screen and (max-width:768px){
+    .warp {
+        max-width: 92%;
+    }
+    /* header */
+    header{
+        height: 50px;
+    }
+    header .menu{
+        height: 50px;
+    }
+    header .menu .menu-lf{
+        display: none;
+    }
+    header .menu .menu-lf2{
+        display: block;
+    }
+    header .menu .menu-lf2{
+        width: 1.1rem;
+        height: 0.9rem;
+    }
+    header .menu .menu-lf2 .ham{
+        width: 1.1rem;
+    }
+    header .menu .menu-lf2 .ham:nth-child(2){
+        top: 0.35rem;
+    }
+    header .menu .menu-lf2 .ham:nth-child(3){
+        top: 0.7rem;
+    }
+    #ham-menu2 .menu{
+        width: 120px;
+    }
+    #ham-menu2 .menu .m-menu{
+        width: 120px;
+        padding-top: 10px;
+    }
+    #ham-menu2 .menu .m-menu .flex>a{
+        font-size: 0.7rem;
+        line-height: 25px;
+    }
+    #ham-menu2 .menu .m-menu .flex>.li-plus{
+        font-size: 10px;
+    }
+    #ham-menu2 .menu .m-menu li>a{
+        font-size: 0.7rem;
+        line-height: 25px;
+    }
+    #ham-menu2 .menu .s-menu{
+        width: 120px;
+    }
+    #ham-menu2 .menu li:nth-child(2) .s-menu2{
+        top:-25px;
+    }
+    #ham-menu2 .menu li:nth-child(4) .s-menu4{
+        top:-75px;
+    }
+    #ham-menu2 .menu .m-menu li>.s-menu li{
+        font-size: 0.7rem;
+        line-height: 25px;
+    }
+    #ham-menu2 .menu .m-menu li>.s-menu li>a{
+        font-size: 0.7rem;
+        line-height: 25px;
+    }
+    header .menu .logo a{
+        width: 50%;
+    }
+    header .menu .menu-rg a i{
+        font-size: 0.7rem;
+    }
+    header .menu .menu-rg{
+        width: 60px;
+    }
+    .menu-lf2.active .ham:nth-child(1){
+        transform: translateY(0.35rem) rotate(-45deg);
+    }
+    .menu-lf2.active .ham:nth-child(2){
+        opacity: 0;
+    }
+    .menu-lf2.active .ham:nth-child(3){
+        transform: translateY(-0.35rem) rotate(45deg);
+    }
+    /* main */
+    .main .main-bg .img img:nth-child(1){
+        display: none;
+    }
+    .main .main-bg .img img:nth-child(2){
+        display: block;
+    }
+    .main .main-bg:nth-child(1) .text .first{
+        font-size: 1rem;
+    }
+    .main .main-bg:nth-child(1) .text h2{
+        font-size: 1.8rem;
+    }
+    .main .main-bg:nth-child(1) .text h2 span{
+        font-size: 2.2rem;
+    }
+    .main .main-bg:nth-child(1) .text .second{
+        font-size: 0.7rem;
+        line-height: 15px;
+    }
+    .main .main-bg:nth-child(2) .text h2{
+        font-size: 1.8rem;
+        line-height: 2.2rem;
+        margin-bottom: 1.2vw;
+    }
+    .main .main-bg:nth-child(2) .text h2 span{
+        font-size: 1.8rem;
+    }
+    .main .main-bg:nth-child(2) .text .first{
+        font-size: 1rem;
+    }
+    .main .main-bg:nth-child(2) .text .second{
+        font-size: 0.7rem;
+        line-height: 15px;
+    }
+    .main .main-bg:nth-child(3) .text h2{
+        font-size: 1.8rem;
+        line-height: 2.2rem;
+    }
+    .main .main-bg:nth-child(3) .text h2 span{
+        font-size: 2.2rem;
+    }
+    .main .main-bg:nth-child(3) .text .first{
+        font-size: 0.7rem;
+        line-height: 15px;
+    }
+    .main .swiper-button-prev:after, .swiper-button-next:after {
+        font-size: 20px;
+    }
+    .main .swiper-pagination-bullet{
+        width: 5px;
+        height: 5px;
+    }
+    /* section1 */
+    #section1{
+        margin: 80px 0;
+    }
+    #section1 .sec1-title{
+        margin-bottom: 0px
+    }
+    #section1 .sec1-title h1{
+        font-size: 1.2rem;
+        margin-bottom: 7px;
+    }
+    #section1 .sec1-title .plus{
+        width: 1.2rem;
+        height: 1.2rem;
+        margin-left: 0.7rem;
+    }
+    #section1 .sec1-title .plus a{
+        width: 1.2rem;
+        height: 1.2rem;
+    }
+    #section1 .sec1-title .plus a i{
+        font-size: 1.2rem;
+    }
+    #section1 .tab ul li a{
+        font-size: 0.8rem;
+        margin-right: 0.8rem;
+    }
+    #section1 .tab{
+        margin-bottom: 1.2rem;
+    }
+    .sec1-part .imgbox a .text h3{
+        font-size: 0.7rem;
+        line-height: 15px;
+        margin-bottom: 2px;
+    }
+    .sec1-part .imgbox a .text .word li{
+        margin-right: 0.3rem;
+    }
+    .sec1-part .imgbox a .text .word li>h5{
+        font-size: 0.7rem;
+    }
+    .sec1-part .imgbox a .text .word li>s {
+        font-size: 0.7rem;
+    }
+    .sec1-part .imgbox a .text h5{
+        font-size: 0.7rem;
+    }
+    /* section2 */
+    #section2{
+        margin: 80px 0;
+        background-size: 120%;
+    }
+    #section2 .overlay .inner{
+        grid-template-rows: repeat(1,1fr);
+        grid-template-columns: repeat(10,1fr);
+    }
+    #section2 .overlay .inner .video{
+        grid-column: 1/7;
+    }
+    #section2 .overlay .inner .text{
+        grid-column: 7/11;
+    }
+    #section2 .overlay .inner .text h3{
+        margin-bottom: 0.7rem;
+    }
+    #section2 .overlay .inner .text h4{
+        margin-bottom: 0.3rem;
+    }
+    #section2 .overlay .inner .text p{
+        margin-bottom: 0.9rem;
+    }
+    #section2 .overlay .inner .text h3{
+        font-size: 1.2rem;
+    }
+    #section2 .overlay .inner .text h4{
+        font-size: 0.8rem;
+    }
+    #section2 .overlay .inner .text p{
+        font-size: 0.7rem;
+        line-height: 15px;
+    }
+    #section2 .overlay .inner .text .btn{
+        width: 70px;
+        height: 25px;
+    }
+    #section2 .overlay .inner .text .btn a{
+        width: 70px;
+        height: 25px;
+    }
+    /* banner */
+    .banner{
+        margin-bottom: 80px;
+    }
+    .banner .b-inner1 .imgbox .text h2{
+        font-size: 1.2rem;
+        margin-bottom: 0.5rem;
+    }
+    .banner .b-inner1 .imgbox .text p{
+        font-size: 0.7rem;
+        line-height: 17px;
+    }
+    .banner .b-inner1 .imgbox .text p span{
+        font-size: 0.8rem;
+    }
+    .banner .b-inner2 .imgbox .text h2{
+        font-size: 1.2rem;
+        margin-bottom: 0.5rem;
+    }
+    .banner .b-inner2 .imgbox .text p{
+        font-size: 0.7rem;
+        line-height: 17px;
+    }
+    .banner .b-inner3 .imgbox .text h2{
+        font-size: 1.2rem;
+        margin-bottom: 0.5rem;
+    }
+    .banner .b-inner3 .imgbox .text p{
+        font-size: 0.7rem;
+        line-height: 17px;
+    }
+    /* section3 */
+    #section3 .box .b-inner .text{
+        margin-top: 12px;
+    }
+    #section3 .box .b-inner .text h3{
+        margin-bottom: 5px;
+    }
+    #section3 .box .b-inner .text p{
+        font-size: 0.7rem;
+        line-height: 15px;
+    }
+    /* section4 */
+    #section4 {
+        margin: 80px 0;
+    }
+    #section4 .box .b-inner .text{
+        top: 15px;
+        left: 15px;
+    }
+    #section4 .box .b-inner .text h3{
+        margin-bottom: 0.4rem;
+    }
+    #section4 .box .b-inner .text h3{
+        font-size: 1rem;
+        margin-bottom: 0.5rem;
+    }
+    #section4 .box .b-inner .text p{
+        font-size: 0.7rem;
+        line-height: 15px;
+        margin-bottom: 0.7rem;
+    }
+    #section4 .box .b-inner .text .btn{
+        width: 70px;
+        height: 25px;
+    }
+    #section4 .box .b-inner .text .btn a{
+        width: 70px;
+        height: 25px;
+    }
+    /* section5 */
+    #section5{
+        margin-bottom: 80px;
+    }
+    #section5 .sec5-title {
+        margin-bottom: 25px;
+    }
+    #section5 .sec5-title h2{
+        font-size: 1.4rem;
+    }
+    #section5 .imgbox .img .review .name {
+        margin-bottom: 0px;
+    }
+    #section5 .imgbox .img .review .name li:first-child i{
+        font-size: 0.7rem;
+    }
+    #section5 .imgbox .img .review .name li:last-child a{
+        font-size: 0.7rem;
+    }
+    #section5 .imgbox .img .review p{
+        font-size: 0.7rem;
+    }
+    /* footer */
+    footer .foot1 .f1-con .f1-item .inner p{
+        font-size: 0.9rem;
+        margin-bottom: 5px;
+    }
+    footer .foot1 .f1-con .f1-item .inner ul li {
+        display: flex;
+        align-items: baseline;
+    }
+    footer .foot1 .f1-con .f1-item:last-child .inner ul{
+        width: 70px;
+    }
+    footer .foot1 .f1-con .f1-item .inner ul li a{
+        font-size: 0.7rem;
+        line-height: 20px;
+    }
+    footer .foot1 .f1-con .f1-item:last-child .inner p{
+        margin-bottom: 7px;
+    }
+    footer .foot1 .f1-con .f1-item:last-child .inner ul li:nth-child(1) button{
+        width: 1.3rem;
+        height: 1.3rem;
+        margin-bottom: 0px;
+    }
+    footer .foot1 .f1-con .f1-item:last-child .inner ul li:nth-child(2) button{
+        width: 1.5rem;
+        height: 1.5rem;
+    }
+    footer .foot1 .f1-con .f1-item:last-child .inner ul li:nth-child(3) button {
+        width: 1.5rem;
+        height: 1.5rem;
+    }
+    footer .foot1 .f1-con .f1-item:last-child .inner ul li:nth-child(2) button i
+    ,footer .foot1 .f1-con .f1-item:last-child .inner ul li:nth-child(3) button i{
+        font-size: 1.5rem;
+    }
+    footer .foot2 .f2-con .f2-item:nth-child(2) .inner p{
+        font-size: 0.9rem;
+    }
+    footer .foot2 .f2-con .f2-item:nth-child(2) .inner ul li {
+        font-size: 0.7rem;
+        line-height: 20px;
+    }
+    footer .foot2 .f2-con .f2-item:nth-child(2) .inner ul li:nth-child(2) a {
+        font-size: 0.7rem;
+    }
+    footer .foot2 .f2-con .f2-item:nth-child(2) .inner ul li:nth-child(5) {
+        margin-top: 7px;
+    }
+    footer .foot2 .f2-con .f2-item:nth-child(3) .inner p {
+        font-size: 0.9rem;
+        margin-bottom: 7px;
+    }
+    footer .foot2 .f2-con .f2-item:nth-child(3) .inner ul li:first-child {
+        font-size: 1rem;
+        margin-bottom: 5px;
+    }
+    footer .foot2 .f2-con .f2-item:nth-child(3) .inner ul li {
+        font-size: 0.7rem;
+        line-height: 20px;
+    }
+    /* scroll */
+    #scroll>button {
+        width: 5.5vw;
+    }
+}
+
+/* 550이하 */
+@media screen and (max-width:550px){
+    /* section1 */
+    #section1 .sec1-title{
+        margin-bottom: 0px
+    }
+    #section1 .sec1-title h1{
+        font-size: 1rem;
+        margin-bottom: 5px;
+    }
+    #section1 .sec1-title .plus{
+        width: 1rem;
+        height: 1rem;    
+        margin-left: 0.6rem;
+    }
+    #section1 .sec1-title .plus a{
+        width: 1rem;
+        height: 1rem;
+    }
+    #section1 .sec1-title .plus a i{
+        font-size: 1rem;
+    }
+    #section1 .tab ul li a{
+        font-size: 0.7rem;
+        margin-right: 0.7rem
+    }
+    #section1 .tab{
+        margin-bottom: 1rem;
+    }
+    .sec1-part{
+        grid-template-rows: repeat(2, 1fr);
+        grid-template-columns: repeat(3, 1fr);
+    }
+    /* .sec1-part .imgbox:nth-child(5){
+        display: none;
+    }
+    .sec1-part .imgbox:nth-child(6){
+        display: none;
+    } */
+    .sec1-part .imgbox:nth-child(7){
+        display: none;
+    }
+    .sec1-part .imgbox:nth-child(8){
+        display: none;
+    }
+    .sec1-part .imgbox a .text h3{
+        font-size: 0.7rem;
+        line-height: 15px;
+        margin-bottom: 2px;
+    }
+    .sec1-part .imgbox a .text .word li{
+        margin-right: 0.3rem;
+    }
+    .sec1-part .imgbox a .text .word li>h5{
+        font-size: 0.7rem;
+    }
+    /* .sec1-part .imgbox a .text .word li:last-child>h5{
+        display: none;
+    } */
+    .sec1-part .imgbox a .text .word li>s {
+        font-size: 0.7rem;
+    }
+    .sec1-part .imgbox a .text h5{
+        font-size: 0.7rem;
+    }
+    /* section2 */
+    #section2{
+        background-size: 185%;
+    }
+    #section2 .overlay{
+        padding-top: 5%;
+        padding-bottom: 4%;
+    }
+    #section2 .overlay .inner{
+        grid-template-rows: repeat(1,1fr);
+        grid-template-columns: repeat(1,1fr);
+    }
+    #section2 .overlay .inner .video{
+        width: 65%;
+        grid-column: none;
+        margin: auto;
+    }
+    #section2 .overlay .inner .text{
+        grid-column: none;
+        text-align: center;
+        margin-top: 15px;
+    }
+    #section2 .overlay .inner .text h3{
+        font-size: 1rem;
+        margin-bottom: 0.7rem;
+    }
+    #section2 .overlay .inner .text h4{
+        font-size: 0.7rem;
+        margin-bottom: 0.7rem;
+    }
+    #section2 .overlay .inner .text p{
+        display: none;
+    }
+    #section2 .overlay .inner .text .btn{
+        width: 60px;
+        height: 20px;
+        font-size: 0.7rem;
+        position: relative;
+        left: 50%;
+        transform: translateX(-50%);
+        margin-top: 5px;
+    }
+    #section2 .overlay .inner .text .btn a{
+        width: 60px;
+        height: 20px;
+    }
+    /* section5 */
+    #section5 .imgbox .img .review p{
+        display: none;
+    }
+    /* banner */
+    .banner .b-inner1 .imgbox .text h2{
+        font-size: 1rem;
+        margin-bottom: 0rem;
+    }
+    .banner .b-inner1 .imgbox .text p{
+        display: none;
+    }
+    .banner .b-inner2 .imgbox .text h2{
+        font-size: 1rem;
+        margin-bottom: 0rem;
+    }
+    .banner .b-inner2 .imgbox .text p{
+        display: none;
+    }
+    .banner .b-inner3 .imgbox .text h2{
+        font-size: 1rem;
+        margin-bottom: 0rem;
+    }
+    .banner .b-inner3 .imgbox .text p{
+        display: none;
+    }
+    /* section3 */
+    #section3 .box .b-inner .text h3{
+        margin-bottom: 0px;
+    }
+    #section3 .box .b-inner .text p{
+        display: none;
+    }
+    /* section4 */
+    #section4 .box .b-inner .text{
+        top: 10px;
+        left: 12px;
+    }
+    #section4 .box .b-inner .text h3{
+        margin-bottom: 0.3rem;
+    }
+    #section4 .box .b-inner .text p{
+        display: none;
+    }
+    #section4 .box .b-inner .text .btn{
+        width: 60px;
+        height: 20px;
+    }
+    #section4 .box .b-inner .text .btn a{
+        width: 60px;
+        height: 20px;
+    }
+    /* section5 */
+    #section5 .imgbox .img .review {
+        height: 25%;
+    }
+    #section5 .sec5-title {
+        margin-bottom: 25px;
+    }
+    #section5 .sec5-title h2{
+        font-size: 1rem;
+    }
+    #section5 .imgbox .img .review .name {
+        margin-bottom: 0px;
+    }
+    #section5 .imgbox .img .review .name li:first-child i{
+        font-size: 0.7rem;
+    }
+    #section5 .imgbox .img .review .name li:last-child a{
+        font-size: 0.7rem;
+    }
+    #section5 .imgbox .img .review p{
+        font-size: 0.7rem;
+    }
+    /* footer */
+    footer .foot1 {
+        padding: 15px 0;
+    }
+    footer .foot1 .f1-con {
+        grid-template-columns: repeat(4,1fr);
+    }
+    footer .foot1 .f1-con .f1-item:last-child{
+        display: none;
+    }
+    footer .foot1 .f1-con .f1-item .inner p{
+        font-size: 0.7rem;
+    }
+    footer .foot2 .f2-con {
+        display: flex;
+        flex-direction: column;
+        padding: 10px 0;
+    }
+    footer .foot2 .f2-con .f2-item:nth-child(1){
+        display: none;
+    }
+    footer .foot2 .f2-con .f2-item:nth-child(2){
+        grid-column: none;
+    }
+    footer .foot2 .f2-con .f2-item:nth-child(2) .inner p{
+        font-size: 0.7rem;
+        margin-bottom: 3px;
+    }
+    footer .foot2 .f2-con .f2-item:nth-child(2) .inner ul li {
+        line-height: 17px;
+    }
+    footer .foot2 .f2-con .f2-item:nth-child(2) .inner ul li:nth-child(5) {
+        margin-top: 0px;
+    }
+    footer .foot2 .f2-con .f2-item:nth-child(3){
+        grid-column: none;
+        margin-top: 30px;
+        display: grid;
+        grid-template-columns: repeat(4,1fr);
+        grid-template-rows: repeat(1,1fr);
+        position: relative;
+        top: 0;
+        left: 0;
+    }
+    footer .foot2 .f2-con .f2-item:nth-child(3) .inner{
+        grid-column: 1/4;
+    }
+    footer .foot2 .f2-con .f2-item:nth-child(3) .inner2{
+        grid-column: 4/5;
+    }
+    footer .foot2 .f2-con .f2-item:nth-child(3) .inner p {
+        font-size: 0.7rem;
+        margin-bottom: 3px;
+    }
+    footer .foot2 .f2-con .f2-item:nth-child(3) .inner ul li {
+        font-size: 0.7rem;
+        line-height: 17px;
+    }
+    footer .foot2 .f2-con .f2-item:nth-child(3) .inner ul li:first-child{
+        font-size: 0.7rem;
+        margin-bottom: 0px;
+        font-weight: 400;
+    }
+    footer .foot2 .f2-con .f2-item:last-child .inner2{
+        display: block;
+    }
+    footer .foot2 .f2-con .f2-item:last-child .inner2 ul{
+        width: 120px;
+        display: flex;
+        justify-content: space-between;
+    }
+    footer .foot2 .f2-con .f2-item:last-child .inner2{
+        display: flex;
+        align-items: baseline;
+        position: absolute;
+        bottom: 0;
+    }
+    footer .foot2 .f2-con .f2-item:last-child .inner2 ul{
+        width: 70px;
+    }
+    footer .foot2 .f2-con .f2-item:last-child .inner2 ul li:nth-child(1) button{
+        width: 1.2rem;
+        height: 1.2rem;
+        background-color: transparent;
+        border: none;
+        cursor: pointer;
+    }
+    footer .foot2 .f2-con .f2-item:last-child .inner2 ul li:nth-child(2) button{
+        width: 1.4rem;
+        height: 1.4rem;
+        background-color: transparent;
+        border: none;
+        cursor: pointer;
+        color: #fff;
+    }
+    footer .foot2 .f2-con .f2-item:last-child .inner2 ul li:nth-child(3) button{
+        width: 1.6rem;
+        height: 1.4rem;
+        background-color: transparent;
+        border: none;
+        cursor: pointer;
+        color: #fff;
+    }
+    footer .foot2 .f2-con .f2-item:last-child .inner2 ul li:nth-child(2) button i
+    ,    footer .foot2 .f2-con .f2-item:last-child .inner2 ul li:nth-child(3) button i{
+        font-size: 1.4rem;
+    }
+    /* scroll */
+    #scroll {
+        right: 7vw;
+        bottom: 15vw;
+    }
+}
+/* 400이하 */
+@media screen and (max-width:400px){
+    /* main */
+    .main .main-bg:nth-child(1) .text .first{
+        font-size: 0.7rem;
+    }
+    .main .main-bg:nth-child(1) .text h2{
+        font-size: 1.2rem;
+    }
+    .main .main-bg:nth-child(1) .text h2 span{
+        font-size: 1.4rem;
+    }
+    .main .main-bg:nth-child(1) .text .second{
+        display: none;
+    }
+    .main .main-bg:nth-child(2) .text h2{
+        font-size: 1.2rem;
+        line-height: 1.5rem;
+        margin-bottom: 1vw;
+    }
+    .main .main-bg:nth-child(2) .text h2 span{
+        font-size: 1.2rem;
+    }
+    .main .main-bg:nth-child(2) .text .first{
+        font-size: 0.7rem;
+    }
+    .main .main-bg:nth-child(2) .text .second{
+        display: none;
+    }
+    .main .main-bg:nth-child(3) .text h2{
+        font-size: 1.2rem;
+        line-height: 1.5rem;
+    }
+    .main .main-bg:nth-child(3) .text h2 span{
+        font-size: 1.4rem;
+    }
+    .main .main-bg:nth-child(3) .text .first{
+        display: none;
+    }
+    .main .swiper-button-prev:after, .swiper-button-next:after {
+        font-size: 20px;
+    }
+    .main .swiper-pagination-bullet{
+        width: 5px;
+        height: 5px;
+    }
+    .main .b-gbtn-prev, .main .bg-btn-next{
+        font-size: 15px;
+    }
+    .main .swiper-button-prev:after, .swiper-button-next:after{
+        font-size: 15px;
+    }
+    .main .swiper-pagination-bullet{
+        width: 3px;
+        height: 3px;
+    }
+    /* section1 */
+    #section1{
+        margin: 60px 0;
+    }
+    #section1 .sec1-title{
+        margin-bottom: 0.7px;
+    }
+    #section1 .sec1-title h1{
+        font-size: 0.9rem;
+        margin-bottom: 7px;
+    }
+    #section1 .sec1-title .plus{
+        width: 0.8rem;
+        height: 0.8rem;
+    }
+    #section1 .sec1-title .plus a{
+        width: 0.8rem;
+        height: 0.8rem;
+    }
+    #section1 .sec1-title .plus a i{
+        font-size: 0.8rem;
+    }
+    #section1 .tab ul li a{
+        font-size: 0.7rem;
+        margin-right: 0.7rem
+    }
+    #section1 .tab{
+        margin-bottom: 0.8rem;
+    }
+    .sec1-part{
+        grid-template-rows: repeat(2, 1fr);
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .sec1-part .imgbox a .text {
+        margin-top: 1.5vw;
+    }
+    .sec1-part .imgbox:nth-child(5){
+        display: none;
+    }
+    .sec1-part .imgbox:nth-child(6){
+        display: none;
+    }
+    .sec1-part .imgbox a .text h3{
+        line-height: 13px;
+    }
+    .sec1-part .imgbox a .text .word li{
+        margin-right: 0.3rem;
+    }
+    .sec1-part .imgbox a .text .word li>h5{
+        font-size: 0.7rem;
+    }
+    .sec1-part .imgbox a .text .word li>s {
+        font-size: 0.7rem;
+    }
+    .sec1-part .imgbox a .text h5{
+        font-size: 0.7rem;
+    }
+    #section2{
+        margin: 60px 0;
+        background-size: 210%;
+    }
+    /* section2 */
+    #section2 .overlay .inner .text h3{
+        font-size: 0.8rem;
+        margin-bottom: 0.5rem;
+    }
+    #section2 .overlay .inner .text h4{
+        margin-bottom: 0.3rem;
+    }
+    #section2 .overlay .inner .text .btn{
+        width: 42px;
+        height: 13px;
+    }
+    #section2 .overlay .inner .text .btn a{
+        width: 42px;
+        height: 13px;
+    }
+    /* banner */
+    .banner {
+        margin-bottom: 60px;
+    }
+    .banner .b-inner1 .imgbox .text h2{
+        font-size: 0.7rem;
+    }
+    .banner .b-inner2 .imgbox .text h2{
+        font-size: 0.7rem;
+    }
+    .banner .b-inner3 .imgbox .text h2{
+        font-size: 0.7rem;
+    }
+    /* section3 */
+    #section3 .box .b-inner .text {
+        margin-top: 7px;
+    }
+    #section3 .box .b-inner .text h3{
+        font-size: 0.7rem;
+        margin-bottom: 0px;
+    }
+    /* section4 */
+    #section4{
+        margin: 60px 0;
+    }
+    #section4 .box .b-inner .text{
+        top: 10px;
+        left: 12px;
+    }
+    #section4 .box .b-inner .text h3{
+        font-size: 0.7rem;
+        margin-bottom: 0rem;
+    }
+    #section4 .box .b-inner .text .btn{
+        width: 40px;
+        height: 12px
+    }
+    #section4 .box .b-inner .text .btn a{
+        width: 40px;
+        height: 12px
+    }
+    /* section5 */
+    #section5{
+        margin-bottom: 60px;
+    }
+    /* footer */
+    footer .foot1 .f1-con .f1-item .inner ul li a {
+        line-height: 17px;
+    }
+}
